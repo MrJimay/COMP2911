@@ -73,9 +73,9 @@ public class Employee {
 	}
 	
 	/**
-	 * Returns the name of the Employee
+	 * Returns a string representation of an Employee object
 	 */
 	public String toString() {
-		return this.name;
+		return this.getClass().getName() + '@' + Integer.toHexString(hashCode());
 	}
 }
