@@ -86,7 +86,7 @@ public class Session {
 	 * @param s
 	 * @return true if the sessions are the same, otherwise returns false
 	 */
-	public boolean equals(Session s) {
+	public boolean equals(Object s) {
 		if (this == s) return true;
 		if (s == null) return false;
 		if (s.getClass() != this.getClass()) return false;
