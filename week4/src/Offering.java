@@ -75,7 +75,7 @@ public class Offering extends Course {
 	 * @param o
 	 * @return true if the offerings are the same, otherwise returns false
 	 */
-	public boolean equals(Offering o) {
+	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null) return false;
 		if (o.getClass() != this.getClass()) return false;
