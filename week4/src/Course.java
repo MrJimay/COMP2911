@@ -51,7 +51,7 @@ public class Course {
 	 * @param c
 	 * @return true if the courses are the same, otherwise returns false
 	 */
-	public boolean equals(Course c) {
+	public boolean equals(Object c) {
 		if (this == c) return true;
 		if (c == null) return false;
 		if (c.getClass() != this.getClass()) return false;
