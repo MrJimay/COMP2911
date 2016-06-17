@@ -1,0 +1,10 @@
+This
+is
+a test
+input
+This
+really
+is
+a useless
+test
+lol

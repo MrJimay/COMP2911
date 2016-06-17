@@ -65,8 +65,12 @@ public class ConcreteSet<E> implements Set<E> {
 		if (this == o) return true;
 		if (o == null || o.getClass()!=this.getClass()) return false;
 		Set<E> that = (Set<E>) o;
-		if (this.elements.equals(that)) return true;
-		return false;
+		for (E element : this.elements) {
+			if (!that.contains(element)) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	@Override

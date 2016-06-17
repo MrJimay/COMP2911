@@ -27,12 +27,21 @@ public class Tester {
 			set.print();
 			System.out.println("Printing set 2:");
 			set2.print();
-			System.out.println("Printing union of set 1 and set 2:");
+			System.out.println("Printing union of set 1 and set 2 (set 3):");
 			Set<String> set3 = set.union(set2);
 			set3.print();
-			System.out.println("Printing intersection of set 1 and set 2:");
+			System.out.println("Printing intersection of set 1 and set 2 (set 4):");
 			Set<String> set4 = set.intersection(set2);
 			set4.print();
+			Set<String> set5 = new ConcreteSet<String>();
+			set5.add("is");
+			System.out.println("Printing set 5:");
+			set5.print();
+			System.out.println("Checking equality:");
+			System.out.println("set 4 equals set 4: " + set4.equals(set4));
+			System.out.println("set 4 equals set 5: " + set4.equals(set5));
+			System.out.println("set 5 equals set 4: " + set5.equals(set4));
+			System.out.println("set 1 equals set 2: " + set.equals(set2));
 		}
 		catch (FileNotFoundException e) {}
 		finally {
