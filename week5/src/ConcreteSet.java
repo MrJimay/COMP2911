@@ -64,13 +64,9 @@ public class ConcreteSet<E> implements Set<E> {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || o.getClass()!=this.getClass()) return false;
-		Set<E> that = (Set<E>) o;
-		for (E element : this.elements) {
-			if (!that.contains(element)) {
-				return false;
-			}
-		}
-		return true;
+		ConcreteSet<?> that = (ConcreteSet<?>) o;
+		if (that.elements.equals(this.elements)) return true;
+		return false;
 	}
 
 	@Override
