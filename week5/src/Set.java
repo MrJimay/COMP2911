@@ -12,4 +12,5 @@ public interface Set<E> extends Iterable<E> {
 	 */
 	boolean isSubset(Set<E> set);
 	boolean equals(Object o);
+	void print();
 }

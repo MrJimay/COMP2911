@@ -5,7 +5,7 @@ public class ConcreteSet<E> implements Set<E> {
 	ArrayList<E> elements;
 	
 	public ConcreteSet() {
-		this.elements = new ArrayList<E>();
+		elements = new ArrayList<E>();
 	}
 	
 	@Override
@@ -16,7 +16,7 @@ public class ConcreteSet<E> implements Set<E> {
 		}
 		return false;
 	}
-
+	
 	@Override
 	public void remove(E element) {
 		elements.remove(element);
@@ -29,8 +29,11 @@ public class ConcreteSet<E> implements Set<E> {
 	
 	@Override
 	public Set<E> union(Set<E> set) {
-		Set<E> unionSet = set;
+		Set<E> unionSet = new ConcreteSet<E>();
 		for (E element : elements) {
+			unionSet.add(element);
+		}
+		for (E element : set) {
 			unionSet.add(element);
 		}
 		return unionSet;
@@ -69,5 +72,12 @@ public class ConcreteSet<E> implements Set<E> {
 	@Override
 	public Iterator<E> iterator() {
 		return elements.iterator();
+	}
+	
+	public void print() {
+		Iterator<E> i = this.iterator();
+		while (i.hasNext()) {
+			System.out.println(i.next());
+		}
 	}
 }
