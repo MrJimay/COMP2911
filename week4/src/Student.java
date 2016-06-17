@@ -107,7 +107,7 @@ public class Student {
 	 * @param s
 	 * @return true if the students are the same, otherwise returns false
 	 */
-	public boolean equals(Student s) {
+	public boolean equals(Object s) {
 		if (this == s) return true;
 		if (s == null) return false;
 		if (s.getClass() != this.getClass()) return false;
