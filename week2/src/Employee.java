@@ -60,7 +60,7 @@ public class Employee {
 	 * @param e
 	 * @return
 	 */
-	public boolean equals(Employee e) {
+	public boolean equals(Object e) {
 		if (e == null) return false;
 		if (this == e) return true;
 		if (this.getClass() != e.getClass()) return false;
