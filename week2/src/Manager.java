@@ -45,7 +45,7 @@ public class Manager extends Employee {
 	 * @param e
 	 * @return
 	 */
-	public boolean equals(Manager m) {
+	public boolean equals(Object m) {
 		if (m == null) return false;
 		if (this == m) return true;
 		if (this.getClass() != m.getClass()) return false;
